@@ -98,4 +98,4 @@ https://github.com/gitalk/gitalk
 
 Vi que tem a limitação de só permitir usuário logado do GitHub.
 
-Enfim, é isso! Registrei minha tragetória nesta tarefa de fazer o meu GitHub Pages e espero que algumas informações aqui possam ser úteis pra você.
+Enfim, é isso! Registrei minha trajetória nesta tarefa de fazer o meu GitHub Pages e espero que algumas informações aqui possam ser úteis pra você.
