@@ -57,3 +57,5 @@ No processo de CI, a esteira, executando por exemplo em um Jenkins, Git CI, Git 
 Quando o desenvolvedor usa o Jhulis no momento da criação do contrato, ele já é estimulado e entender e aprender as regras na prática, mesmo sem ter estudado o guia de práticas da empresa. Este mesmo desenvolvedor, chega no time de especialistas com um nível de maturidade maior e o custo pra isso é um serviço rodando em um servidor: o que é bem mais barato do que a hora de um analista.
 
 O Jhulis integrado em uma esteira de CI, vira um *gate* de qualidade e impede que códigos evoluam sem ter passado por um fluxo de qualidade no que diz respeito ao contrato de API.
+
+> Acesse o projeto do Jhulis no Github: https://github.com/oliveira-michel/Jhulis
