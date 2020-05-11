@@ -1,4 +1,4 @@
-# Escrevendo APIs melhores com o Jhulis: validando boas práticas
+# Escrevendo APIs melhores com o Jhulis
 
 Linguagens para definição de contratos de REST APIs, como OpenAPI Specification (aka Swagger) servem para gerar um documento que pode ser usado em gateways, middlewares, geração de código, entre outros e, principalmente, gerar documentação para os usuários.
 
@@ -34,7 +34,9 @@ A avaliação funcional das APIs, ou seja, análise da granularidade com que as 
 * se não há descrições e exemplos, isso pode ser melhorado;
 * se existem rotas com recursos do tipo "/gravar-isso", "apagar-aquilo" etc., provavelmente o analista não está utilizando corretamente os verbos HTTP e nomeando corretamente os recursos.
 
-O Jhulis é capaz de fazer mais de 30 sugestões de ajustes como essas, fazendo com que o contrato da API fique mais aderente às boas práticas sem depender de um especialista em APIs orientando neste tipo de detalhes.
+O Jhulis é  um projeto Open Source, em dotNET Core, capaz de fazer mais de 30 sugestões de ajustes como essas, fazendo com que o contrato da API fique mais aderente às boas práticas sem depender de um especialista em APIs orientando neste tipo de detalhes.
+
+Está na versão beta, mas já pode trazer mais eficiência na criação de bons contratos de API para o seu time de desenvolvimento.
 
 ## Proposta de uso do Jhulis com DEVOPS
 
@@ -42,5 +44,14 @@ O Jhulis pode atuar em dois momentos: na etapa de criação do contrato de API e
 
 ![fluxo de uso do jhulis](https://raw.githubusercontent.com/oliveira-michel/artigos/master/jhulis/fluxo-integracao.png)
 
+No ciclo de desenvolvimento, enquanto o contrato ainda se encontra na máquina/branch do desenvolvedor, o desenvolvedor pode usar o Jhulis fazer a validação dos aspectos técnicos do contrato. A cada sugestão de ajuste, o desenvolvedor tem oportunidade de corrigir ou, minimamente, refletir se aquilo se aplica à sua necessidade atual.
 
+Após fazer os ajustes para passar por todas as regras ou adicionar *supressions* indicando que alguma regra não se aplica a algum item do contrato, o desenvolvedor submete o contrato para que seja validado por analistas "especialistas em API".
 
+Estes especialistas deverão validar se as *supressions* definidas pelo desenvolvedor fazem sentido ou se podem ajudá-lo a ajustar o contrato todas as práticas e podem fazer a análise funcional da API: aderência ao negócio que ela expõe, uso de linguagem ubíqua, se a granularidade dos recursos nas APIs está coerente etc.
+
+Os especialistas podem estar associados a alguma role do Git e a aprovação do merge request associada ao Ok de alguém com esta role.
+
+O contrato e arquivo de supression pode estar em um pasta pré-definida no mesmo repositório do código fonte da API.
+
+No processo de CI, a esteira, executando por exemplo em um Jenkins, Git CI, Git Actions etc. identifica o tipo de software, se for API, busca o contrato, o arquivo de supressions e revalida ele no Jhulis. Caso a validação falhe, significa que algum dos passos anteriores falhou ou não foi executado devidamente. Assim, em tempo, antes de algum primeiro deploy, o desenvolvedor tem oportunidade de fazer os ajustes necessários.
