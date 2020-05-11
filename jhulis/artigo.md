@@ -40,7 +40,7 @@ O Jhulis é capaz de fazer mais de 30 sugestões de ajustes como essas, fazendo 
 
 O Jhulis pode atuar em dois momentos: na etapa de criação do contrato de API e na etapa de se garantir a qualidade dele através da esteira de CI.
 
-[fluxo de uso do jhulis](https://raw.githubusercontent.com/oliveira-michel/artigos/master/jhulis/fluxo-integracao.png)
+![fluxo de uso do jhulis](https://raw.githubusercontent.com/oliveira-michel/artigos/master/jhulis/fluxo-integracao.png)
 
 
 
