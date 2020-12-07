@@ -1,4 +1,8 @@
-# Escrevendo APIs melhores com o Jhulis
+[//]: # (data-criacao:2020-05-11)
+[//]: # (resumo:Jhulis é um projeto Open Source que valida APIs REST com relação às boas práticas de mercado.)
+[//]: # (hashtags:rest)
+[//]: # (#imagem:header.jpg)
+# Como o Jhulis te ajuda a manter a qualidade dos seus contratos de APIs
 
 Linguagens para definição de contratos de REST APIs, como [OpenAPI Specification (aka Swagger)](https://swagger.io/docs/specification/about) servem para gerar um documento que pode ser usado em gateways, middlewares, geração de código, entre outros e, principalmente, gerar documentação para os usuários.
 
